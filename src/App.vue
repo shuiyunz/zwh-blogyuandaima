@@ -6,10 +6,26 @@ import mianleft from "./components/qvyv/mianleft.vue";
 import mianright from "./components/qvyv/mianright.vue";
 import shemei from "./components/zujian/shemei.vue";
 
+import pho1 from "./assets/img/beijing/beijing1.jpg";
+import pho2 from "./assets/img/beijing/beijing2.jpg";
+import pho3 from "./assets/img/beijing/beijing3.jpg";
+import pho4 from "./assets/img/beijing/beijing4.jpg";
+import pho5 from "./assets/img/beijing/beijing5.jpg";
+import pho6 from "./assets/img/beijing/beijing6.jpg";
+
+const pho = [pho1, pho2, pho3, pho4, pho5, pho6];
+
+
 onMounted(() => {
-  const randomBgNum = Math.floor(Math.random() * 6) + 1 // 假设有6张背景图
-  document.body.style.backgroundImage = `url('src/assets/img/beijing/beijing${randomBgNum}.jpg')`
+  const randomBgNum = Math.floor(Math.random() * pho.length) // 假设有6张背景图
+  document.body.style.backgroundImage = `url(${pho[randomBgNum]})`
 })
+
+// onMounted(() => {
+//   const imagePaths = Object.values(backgroundImages).map(module => module.default)
+//   const randomIndex = Math.floor(Math.random() * imagePaths.length)
+//   document.body.style.backgroundImage = `url('${imagePaths[randomIndex]}')`
+// })
 
 
 </script>
@@ -25,7 +41,7 @@ onMounted(() => {
 
 <style>
   body {
-    background-image: url('src/assets/img/beijing/beijing1.jpg');
+    /* background-image: url('assets/img/beijing/beijing1.jpg'); */
     background-size: cover; /* 图片覆盖整个页面 */
     background-position: center; /* 图片居中显示 */
     background-repeat: no-repeat; /* 不重复平铺 */

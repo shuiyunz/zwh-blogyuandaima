@@ -12,66 +12,85 @@ import song8 from '@/assets/MP3/songs/茫.mp3'
 import song9 from '@/assets/MP3/songs/要你管.mp3'
 import song10 from '@/assets/MP3/songs/Baby，Don’t Cry.mp3'
 
+import zanting from '@/assets/img/player/biaoqian/player2.svg'
+import bofang from '@/assets/img/player/biaoqian/player3.svg'
+
+const img1 = ref('http://img3.kuwo.cn/star/albumcover/500/72/76/3791206792.jpg')
+const img2 = ref('https://img1.kuwo.cn/star/albumcover/500/s4s82/29/3673122490.jpg')
+const img3 = ref('http://img1.kuwo.cn/star/albumcover/500/s3s10/34/2157405799.jpg')
+const img4 = ref('https://ts1.tc.mm.bing.net/th/id/OIP-C.WoOBLe3i3r_GQwclRlpfWAAAAA?w=108&h=108&c=1&bgcl=a5be44&r=0&o=7&dpr=1.5&pid=ImgRC&rm=3')
+const img5 = ref('http://img2.kuwo.cn/star/albumcover/500/83/38/4092414705.jpg')
+const img6 = ref('http://img2.kuwo.cn/star/albumcover/500/53/2/2645507855.jpg')
+const img7 = ref('http://img4.kuwo.cn/star/albumcover/500/38/52/2979075485.jpg')
+const img8 = ref('http://img3.kuwo.cn/star/albumcover/500/87/99/1167291248.jpg')
+const img9 = ref('http://img1.kuwo.cn/star/albumcover/500/4/36/1133624302.jpg')
+const img10 = ref('https://ts4.tc.mm.bing.net/th/id/OIP-C.fgh6QQbQV-sMATWSR7V_VAHaHa?w=108&h=108&c=1&bgcl=cca172&r=0&o=7&dpr=1.5&pid=ImgRC&rm=3')
+
+// const song1 = ref('https://sp-sycdn.kuwo.cn/e03e3ce35280e664fd53feb3d114ed2c/689349fc/resource/n3/72/23/2714299072.mp3?bitrate$128&from=vip')
+
+
+
   const songs = ref([
         {
           title: "灾",
           artist: "易烊千玺",
           src: song1,
-          img: "/src/assets/img/player/songs/灾.jpg"
+          img: img1,
         },
         {
           title: "Deadman",
           artist: "蔡徐坤",
           src: song2,
-          img:"/src/assets/img/player/songs/Deadman.jpg"
+          img: img2
         },
         {
           title: "不眠之夜",
           artist: "张杰",
           src: song3,
-          img:"/src/assets/img/player/songs/不眠之夜.jpg"
+          img: img3
         },
         {
           title: "第三十八年夏至",
           artist: "河图",
           src: song4,
-          img:"/src/assets/img/player/songs/第三十八年夏至.jpg"
+          img: img4
+
         },
         {
           title: "夜泊秦淮",
           artist: "Ice Paper",
           src: song5,
-          img:"/src/assets/img/player/songs/夜泊秦淮.jpg"
+          img: img5
         },
         {
           title: "One Night In Shanghai",
           artist: "胡彦斌",
           src: song6,
-          img:"/src/assets/img/player/songs/One Night In Shanghai.jpg"
+          img: img6
         },
         {
           title: "LOSER",
           artist: "米津玄师",
           src: song7,
-          img:"/src/assets/img/player/songs/LOSER.jpg"
+          img: img7
         },
         {
           title: "茫",
           artist: "李润祺",
           src: song8,
-          img:"/src/assets/img/player/songs/茫.jpg"
+          img: img8
         },
         {
           title: "要你管",
           artist: "时代少年团",
           src: song9,
-          img:"/src/assets/img/player/songs/要你管.jpg"
+          img: img9
         },
         {
           title: "Baby，Don’t Cry",
           artist: "EXO",
           src: song10,
-          img:"/src/assets/img/player/songs/Baby，Don’t Cry.jpg"
+          img: img10
         },
   ])
 
@@ -94,14 +113,17 @@ import song10 from '@/assets/MP3/songs/Baby，Don’t Cry.mp3'
 
    // 添加播放状态响应式变量
    const isPlaying = ref(false)
+   const currentImage = ref(bofang)
    
    function tingyvfang() {
       if (audio.paused) {
           audio.play()
-          isPlaying.value = true
+          // isPlaying.value = true
+          currentImage.value = zanting
       } else {
           audio.pause()
-          isPlaying.value = false
+          // isPlaying.value = false
+          currentImage.value = bofang
       }
    }
 
@@ -184,10 +206,7 @@ import song10 from '@/assets/MP3/songs/Baby，Don’t Cry.mp3'
          <ul>
            <li><img src="../../assets/img/player/biaoqian/player1.svg" class="shangyishou" @click="huange(-1)"></li>
            <li>
-               <img 
-                   :src="isPlaying ? 'src/assets/img/player/biaoqian/player2.svg' : 'src/assets/img/player/biaoqian/player3.svg'"
-                   @click="tingyvfang"
-               >
+               <img :src="currentImage" @click="tingyvfang()">
            </li>
            <li><img src="../../assets/img/player/biaoqian/player4.svg" class="xiaoyishou" @click="huange(1)"></li>
            <li><img src="../../assets/img/player/biaoqian/player5.svg" class="liebiao" @click="liebiao()"></li>

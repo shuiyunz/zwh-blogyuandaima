@@ -1,22 +1,33 @@
 <script setup>
 
 import { ref } from 'vue'
-import imgone1 from '../../assets/img/xiangmu/个人博客.png'
+// import imgone1 from '@/assets/img/xiangmu/个人博客.png'
 
+// import imgtwo1 from '@/assets/img/xuexi/xuexi1.webp'
+// import imgtwo2 from '@/assets/img/xuexi/xuexi2.webp'
+// import imgtwo3 from '@/assets/img/xuexi/xuexi3.webp'
+// import imgtwo4 from '@/assets/img/xuexi/xuexi4.webp'
+// import imgtwo5 from '@/assets/img/xuexi/xuexi5.webp'
+// import imgtwo6 from '@/assets/img/xuexi/xuexi6.webp'
+// import imgtwo7 from '@/assets/img/xuexi/xuexi7.webp'
+// import imgtwo8 from '@/assets/img/xuexi/xuexi8.webp'
+// import imgtwo9 from '@/assets/img/xuexi/xuexi9.webp'
+// import imgtwo10 from '@/assets/img/xuexi/xuexi10.webp'
+// import imgtwo11 from '@/assets/img/xuexi/xuexi11.webp'
 
+const imgone1 = ref('https://i0.hdslb.com/bfs/album/4ab4e0093d642135a1a1dac13a5bb0c0174830650.png@720w_450h_1e_1c.webp')
 
-
-import imgtwo1 from '../../assets/img/xuexi/xuexi1.webp'
-import imgtwo2 from '../../assets/img/xuexi/xuexi2.webp'
-import imgtwo3 from '../../assets/img/xuexi/xuexi3.webp'
-import imgtwo4 from '../../assets/img/xuexi/xuexi4.webp'
-import imgtwo5 from '../../assets/img/xuexi/xuexi5.webp'
-import imgtwo6 from '../../assets/img/xuexi/xuexi6.webp'
-import imgtwo7 from '../../assets/img/xuexi/xuexi7.webp'
-import imgtwo8 from '../../assets/img/xuexi/xuexi8.webp'
-import imgtwo9 from '../../assets/img/xuexi/xuexi9.webp'
-import imgtwo10 from '../../assets/img/xuexi/xuexi10.webp'
-import imgtwo11 from '../../assets/img/xuexi/xuexi11.webp'
+const imgtwo1 = ref('https://i0.hdslb.com/bfs/archive/3499ed831caec14e273ac16ef96bc969b62c5da9.jpg@672w_378h_1c.webp')
+const imgtwo2 = ref('https://i0.hdslb.com/bfs/archive/84705cdc024a6c7ba5fdc86977e2e27e49a5685a.jpg@672w_378h_1c.webp')
+const imgtwo3 = ref('https://i0.hdslb.com/bfs/archive/7cbcf700e3950f40dab97b5e57c8581733fdad22.jpg@672w_378h_1c.webp')
+const imgtwo4 = ref('https://i0.hdslb.com/bfs/archive/f1a8675f645e2ff65077f3ed05f806616d124c9c.jpg@672w_378h_1c.webp')
+const imgtwo5 = ref('https://i0.hdslb.com/bfs/archive/0c95a6ac5ae81dbc7425bb0c01604dbe3a99568d.jpg@672w_378h_1c.webp')
+const imgtwo6 = ref('https://i0.hdslb.com/bfs/archive/c0247f29a115368ed1d236126a8b0cae0dd1396e.jpg@672w_378h_1c.webp')
+const imgtwo7 = ref('https://i0.hdslb.com/bfs/archive/d59aecdfae672457c6689ff9645f5af44f193a2b.jpg@672w_378h_1c.webp')
+const imgtwo8 = ref('https://i0.hdslb.com/bfs/archive/0ab488b069ff63287e812f29a6b3fce4e76d78ad.jpg@672w_378h_1c.webp')
+const imgtwo9 = ref('https://i0.hdslb.com/bfs/archive/61d51c972220f45f2b802e4cdde72289950cb794.png@672w_378h_1c.webp')
+const imgtwo10 = ref('https://i0.hdslb.com/bfs/archive/bc53f6bab261c8d3e0742286e0f7314c5206ede2.jpg@672w_378h_1c.webp')
+const imgtwo11 = ref('https://i0.hdslb.com/bfs/archive/71125548cb03a06191118f5c866f570aee4e1241.jpg@672w_378h_1c.webp')
 
 
 
@@ -132,7 +143,7 @@ const bianxuexi = () => {
         <a :href="item.web">
         <div class="huamian">
           <div class="zhaopian">
-            <img :src="item.img" alt="">
+            <img :src="item.img" alt="" referrerpolicy="no-referrer">
           </div>
           <div class="jieshao">
             <div class="one1">{{item.one}}</div>

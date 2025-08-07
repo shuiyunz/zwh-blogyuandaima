@@ -3,19 +3,26 @@
   import { ElCarousel, ElCarouselItem } from 'element-plus'
   import { ref } from 'vue';
 
-  import img1 from '../../assets/img/lunbotu/多层神经网络结构示意图.png'
+  // import img1 from '../../assets/img/lunbotu/多层神经网络结构示意图.png'
 
-  import img2 from '../../assets/img/lunbotu/轴突“珍珠串”显微图像.webp'
+  // import img2 from '../../assets/img/lunbotu/轴突“珍珠串”显微图像.webp'
 
-  import img3 from '../../assets/img/lunbotu/虚拟现实.jpg'
+  // import img3 from '../../assets/img/lunbotu/虚拟现实.jpg'
 
-  import img4 from '../../assets/img/lunbotu/人机.webp'
+  // import img4 from '../../assets/img/lunbotu/人机.webp'
 
-  import img5 from '../../assets/img/lunbotu/回望地球.jpg'
+  // import img5 from '../../assets/img/lunbotu/回望地球.jpg'
+
+  const img1 = ref('https://i0.hdslb.com/bfs/archive/3fddf427ddef5a78105deb60180727a7ad47c4d8.jpg')
+  const img2 = ref('https://ts2.tc.mm.bing.net/th/id/OIP-C.-hvZBmyxCdQoMZ0XhHyUzwHaF6?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3')
+  const img3 = ref('https://pic.ibaotu.com/22/07/12/paixin/pki_10571487.jpg!fw700')
+  const img4 = ref('https://mp.ofweek.com/Upload/News/Img/member1852/202009/wx_article_20200922100426_0RUVtA.jpg')
+  const img5 = ref('https://ts1.tc.mm.bing.net/th/id/R-C.f2220af7b1413d005690f564828e7c06?rik=%2bKj2dJIDtOayJg&riu=http%3a%2f%2fwww.cnsa.gov.cn%2fn6758968%2fn6758973%2fc6771683%2fpart%2f6769595.jpg&ehk=%2bspS40chxC1fZp4X7WdUFgCHOwty3tpkuhLmPdDcoGg%3d&risl=&pid=ImgRaw&r=0')
 
 
 
-  const imgs = ref([img1,img2,img3,img4,img5])
+  const imgs = ref([img1.value,img2.value,img3.value,img4.value,img5.value])
+
 
 
 </script>
@@ -29,7 +36,7 @@
       <el-carousel-item v-for="(_, index) in imgs" :key="index" class="rongqi2">
          <div class="tupian">
           <!-- 修正图片绑定方式 -->
-          <img :src="imgs[index]" alt="">
+          <img :src="imgs[index]" alt="" referrerpolicy="no-referrer">
          </div>
       </el-carousel-item>
     </el-carousel>
